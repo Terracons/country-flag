@@ -1,0 +1,186 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Base Styles */
+body {
+    background-color: #36454F;
+}
+
+#header {
+    background-color: #36454F;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+
+}
+
+h2 {
+    display: inline;
+}
+
+.lower {
+    background-color: #1C2429;
+    padding-top: 20px;
+}
+
+.flag-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    height: 300px;
+    background-color: #36454F;
+    margin: 20px;
+}
+
+h3 {
+    color: white;
+}
+
+.cards-container {
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+p {
+    color: white;
+}
+
+.search-filter {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+}
+
+input {
+    border: none;
+    background-color: #36454F;
+    color: white;
+    height: 40px;
+    width: 250px;
+    background-image: url(./asset/icons8-search-50.svg);
+    background-position: right 10px center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+select {
+    border: none;
+    background-color: #36454F;
+    color: white;
+    height: 40px;
+    width: 200px;
+}
+
+.image_desc {
+    width: 100%;
+    height: 150px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.description {
+    margin-top: 15px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Breakpoints */
+
+/* Large Screen (Desktops) */
+@media screen and (min-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #header, .search-filter {
+        margin-left: 60px;
+        margin-right: 90px;
+    }
+}
+
+/* Medium Screen (Tablets, landscape mode) */
+@media screen and (max-width: 1200px) and (min-width: 750px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #header, .search-filter {
+        margin-left: 60px;
+        margin-right: 90px;
+    }
+    .flag-card {
+        width: 250px;
+        height: 300px;
+    }
+}
+
+/* Small Screen (Tablets, portrait mode) */
+@media screen and (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #header, .search-filter {
+        margin-left: 60px;
+        margin-right: 90px;
+    }
+
+    .flag-card {
+        width: 250px;
+        height: 300px;
+    }
+
+}
+
+/* Extra Small Screen (Mobile) */
+@media screen and (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    .flag-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+        height: 300px;
+        background-color: #36454F;
+        margin: 20px;
+    }
+
+    h2{
+        font-size: 12px;
+    }
+
+    .search-filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 50px;
+
+    }
+
+
+}
